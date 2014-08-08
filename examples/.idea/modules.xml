@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/java-8-intro.iml" filepath="$PROJECT_DIR$/java-8-intro.iml" />
+      <module fileurl="file://$PROJECT_DIR$/part1_lambdas-streams/part1_lambdas-streams.iml" filepath="$PROJECT_DIR$/part1_lambdas-streams/part1_lambdas-streams.iml" />
+    </modules>
+  </component>
+</project>
+

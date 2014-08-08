@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.nexelem.java8.lambdas.SimpleLambdaTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2014-08-08T03:57:19" hostname="pdolega" time="0.037">
+  <properties/>
+  <testcase name="testSimpleLambdaExpression" classname="com.nexelem.java8.lambdas.SimpleLambdaTest" time="0.037"/>
+  <system-out><![CDATA[Testing
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
