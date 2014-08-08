@@ -435,7 +435,7 @@ transactions.sort(comparing(Transaction::getValue));
 					  <p class="fragment">
 					  Now let's reverse order:
 					  <pre class="fragment"><code>
-listOfStrings.sort(comparing(Transaction::getValue)
+transactions.sort(comparing(Transaction::getValue)
   .reversed()
 );
 					  </code></pre>
@@ -444,7 +444,7 @@ listOfStrings.sort(comparing(Transaction::getValue)
 					  <p class="fragment">
 					  Now let's add secondary ordering alphabetical order
 					  <pre class="fragment"><code>
-listOfStrings.sort(comparing(Transaction::getValue)
+transactions.sort(comparing(Transaction::getValue)
   .reversed()
   .thenComparing(Transaction::getCustomer)
 );
@@ -484,6 +484,57 @@ Predicate&lt;String&gt; p = s -&gt; list.add(s);
 Consumer&lt;String&gt; b = s -&gt; list.add(s);
 					</code></pre>
 					</p>
+				</section>
+				
+				<section>
+					<h2>Default methods</h2>
+					
+					<p>Back to one of examples:</p>
+					
+					<p>
+					<pre><code>
+transactions.sort(comparing(Transaction::getValue));
+					</code></pre>
+					</p>
+					
+					<p>
+					List::sort is new method in Java 8. Previously you used Collections::sort
+					</p>
+				</section>
+				
+								<section>
+					<h2>Default methods</h2>
+					
+					<p>
+					<pre><code>
+interface List {
+  default void sort(Comparator&lt;? super E&gt; c){
+    Collections.sort(this, c);
+  }
+}
+					</code></pre>
+					</p>
+					
+					<p>
+					Basically default methods are methods that can be put also inside interfaces.
+				</section>
+				
+				<section>
+				  <h2>limitations</h2>
+				  
+				  You can use only what's availabe from this interface:
+				  <ol>
+				    <li>parameters</li>
+				    <li>declared methods</li>
+				    <li>global static methods</li>
+				    <li>constants</li>
+				  </p>
+				</section>
+				
+				<section>
+				  <h2>Great example comes from Ruby !</h2>				  
+				  
+				  <a href="http://www.ruby-doc.org/core-2.1.0/Enumerable.html" target="_blank">Enumerable</a>				
 				</section>
 				
 				<section>
